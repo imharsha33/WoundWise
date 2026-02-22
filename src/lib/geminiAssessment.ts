@@ -19,7 +19,7 @@ export interface AssessmentResult {
     usedFallback?: boolean;
 }
 
-const GEMINI_API_KEY = "";
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY || "";
 const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${GEMINI_API_KEY}`;
 
 // Compress image to max 512x512 and quality 0.7 to keep payload small
